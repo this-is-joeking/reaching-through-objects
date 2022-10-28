@@ -18,4 +18,10 @@ class Apartment
     @rooms << room
   end
 
+  def list_rooms_by_name_alphabetically
+    names_list= @rooms.map do |room|
+      room.name
+    end
+    names_list.sort
+  end
 end

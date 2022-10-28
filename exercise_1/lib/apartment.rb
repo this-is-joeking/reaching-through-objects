@@ -9,4 +9,7 @@ class Apartment
     @rented
   end
 
+  def rent
+    @rented = true
+  end
 end

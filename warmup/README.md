@@ -2,7 +2,7 @@
 
 Write code to make the tests pass in the following sequence:
 
-* `spec/candy_spec.rb`
+ `spec/candy_spec.rb`
 * `spec/bag_spec.rb`
 * `spec/costume_spec.rb`
 * `spec/trick_or_treater_spec.rb`

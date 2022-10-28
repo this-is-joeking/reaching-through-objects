@@ -6,14 +6,18 @@ class Bag
   end
 
   def empty?
-    true
+    @candies == []
   end
 
   def count
-    0
+    @candies.length
   end
 
   def add_candy(candy)
     @candies << candy
+  end
+
+  def contains?(candy_in_question)
+    @candies.any? {|candy| candy.type == candy_in_question}
   end
 end

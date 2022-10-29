@@ -13,7 +13,7 @@ describe Building do
   it 'has a number' do
     building = Building.new("623", "Lazul")
 
-    expect(building.number).to eq("623")
+    expect(building.building_number).to eq("623")
 
   end
 end

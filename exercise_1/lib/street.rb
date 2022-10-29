@@ -17,4 +17,14 @@ class Street
   def number_of_available_apartments
     @buildings_array.sum {|bldg| bldg.num_avail_apts}
   end
+
+  def list_available_apartments
+    list = {}
+    @buildings_array.map do |bldg|
+      bldg.avail_apts.map do |apt|
+        list[bldg.building_name] = apt.list_rooms_by_name_alphabetically
+      end
+    end
+    list
+  end
 end

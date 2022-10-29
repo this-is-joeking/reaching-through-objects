@@ -28,9 +28,9 @@ describe Building do
     apt_2 = Apartment.new
     apt_5 = Apartment.new
 
-    bldg.add_apartment(apt_1)
-    bldg.add_apartment(apt_2)
-    bldg.add_apartment(apt_5)
+    building.add_apartment(apt_1)
+    building.add_apartment(apt_2)
+    building.add_apartment(apt_5)
 
     expect(building.list_apartments).to eq([apt_1, apt_2, apt_5])
   end

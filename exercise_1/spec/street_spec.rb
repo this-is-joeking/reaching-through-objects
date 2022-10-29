@@ -84,9 +84,8 @@ describe Street do
     lazul.add_apartment(apt_3)
 
     expect(bell.list_available_apartments).to eq({
-      "Saratoga Ridge" => ["bedroom", "laundry"],
-      "Saratoga Ridge" => ["bathroom", "bedroom", "kitchen", "laundry"],
-      "Lazul Apartments" => ["bathroom", "bedroom", "laundry"]
+      "Saratoga Ridge" => [["bedroom", "laundry"],["bathroom", "bedroom", "kitchen", "laundry"]],
+      "Lazul Apartments" => [["bathroom", "bedroom", "laundry"]]
       })
   end
 end

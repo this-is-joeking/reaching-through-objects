@@ -23,5 +23,7 @@ attr_reader :building_name,
     avail_apts.length
   end
 
-
+  def rooms_in_apts
+    avail_apts.map {|apt| apt.list_rooms_by_name_alphabetically}
+  end
 end

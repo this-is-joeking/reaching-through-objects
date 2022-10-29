@@ -21,10 +21,12 @@ class Street
   def list_available_apartments
     list = {}
     @buildings_array.map do |bldg|
-      bldg.avail_apts.map do |apt|
-        list[bldg.building_name] = apt.list_rooms_by_name_alphabetically
-      end
+      list[bldg.building_name] = bldg.rooms_in_apts
     end
     list
   end
+  ## reaching through building into apts,
+  # that is 1 too many levels
+  # instead need to write method in bldg that returns
+  # the room names alpha
 end

@@ -25,8 +25,4 @@ class Street
     end
     list
   end
-  ## reaching through building into apts,
-  # that is 1 too many levels
-  # instead need to write method in bldg that returns
-  # the room names alpha
 end

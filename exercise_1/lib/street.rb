@@ -15,4 +15,16 @@ class Street
     end
     buildings_alpha.sort
   end
+
+  def number_of_available_apartments
+    unrented_apts = []
+    @buildings_array.each do |building|
+      building.list_apartments.each do |apt|
+        if apt.is_rented? == false
+          unrented_apts << apt
+        end
+      end
+    end
+    unrented_apts.length
+  end
 end

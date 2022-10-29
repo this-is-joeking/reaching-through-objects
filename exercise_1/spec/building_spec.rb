@@ -60,4 +60,24 @@ describe Building do
 
     expect(building.num_avail_apts).to eq(3)
   end
+
+  it 'can provide list of the apts available including the rooms' do
+    building = Building.new("623", "Lazul")
+    apt_1 = Apartment.new
+    apt_2 = Apartment.new
+    bathroom = Room.new("bathroom")
+    laundry = Room.new("laundry")
+    kitchen = Room.new('kitchen')
+    bedroom = Room.new('bedroom')
+    building.add_apartment(apt_1)
+    building.add_apartment(apt_2)
+    apt_1.add_room(bedroom)
+    apt_1.add_room(laundry)
+    apt_2.add_room(bedroom)
+    apt_2.add_room(bathroom)
+    apt_2.add_room(kitchen)
+    apt_2.add_room(laundry)
+
+    expect(building.rooms_in_apts).to eq([["bedroom", "laundry"], ["bathroom", "bedroom", "kitchen", "laundry"]])
+  end
 end

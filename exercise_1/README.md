@@ -1,4 +1,4 @@
-# Exericse 1 - Adlington Road
+# Exericse 1 - Adlington Road - completed
 
 ## Instructions
 On "Adlington Road", there are many buildings with apartments for rent. You are the owner of these apartment buildings. You need a way to manage your apartments, schedule maintenance and upkeep, and charge rent. But, to start with, we need to be able to see where all the rooms are.
@@ -103,7 +103,7 @@ Example:
   adlington.buildings
   # => ["Savills Apartment Building", "Zebra Apartments"]
   ```
-===============Resume Here========================
+
 1. A `Street` must be able to state the number of `Apartments` that are not currently `rented`.
 Example:
   ```

@@ -14,4 +14,14 @@ attr_reader :building_name,
   def list_apartments
     @apartments
   end
+
+  def avail_apts
+    @apartments.select {|apt| !apt.is_rented?}
+  end
+
+  def num_avail_apts
+    avail_apts.length
+  end
+
+
 end

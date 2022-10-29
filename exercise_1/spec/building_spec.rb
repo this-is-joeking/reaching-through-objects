@@ -45,6 +45,19 @@ describe Building do
     building.add_apartment(apt_2)
     building.add_apartment(apt_5)
 
-    expect(building.avail_apts).to eq(3)
+    expect(building.avail_apts).to eq([apt_1, apt_2, apt_5])
+  end
+
+  it 'can return number of available apartments' do
+    building = Building.new("623", "Lazul")
+    apt_1 = Apartment.new
+    apt_2 = Apartment.new
+    apt_5 = Apartment.new
+
+    building.add_apartment(apt_1)
+    building.add_apartment(apt_2)
+    building.add_apartment(apt_5)
+
+    expect(building.num_avail_apts).to eq(3)
   end
 end

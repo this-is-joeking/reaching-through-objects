@@ -17,14 +17,6 @@ class Street
   end
 
   def number_of_available_apartments
-    unrented_apts = []
-    @buildings_array.each do |building|
-      building.list_apartments.each do |apt|
-        if apt.is_rented? == false
-          unrented_apts << apt
-        end
-      end
-    end
-    unrented_apts.length
+    @buildings_array.sum {|bldg| bldg.num_avail_apts}
   end
 end

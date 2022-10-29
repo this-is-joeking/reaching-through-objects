@@ -103,7 +103,7 @@ Example:
   adlington.buildings
   # => ["Savills Apartment Building", "Zebra Apartments"]
   ```
-
+===============Resume Here========================
 1. A `Street` must be able to state the number of `Apartments` that are not currently `rented`.
 Example:
   ```

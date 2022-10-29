@@ -10,10 +10,8 @@ class Street
   end
 
   def buildings
-    buildings_alpha = @buildings_array.map do |bldg|
-      bldg.building_name
-    end
-    buildings_alpha.sort
+    @buildings_array.map {|bldg| bldg.building_name}.sort
+
   end
 
   def number_of_available_apartments
